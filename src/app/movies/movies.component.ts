@@ -28,6 +28,7 @@ export class MoviesComponent implements OnInit {
   selectedMovie: Movie;
   onSelect(movie: Movie): void {
     this.selectedMovie = movie;
+    this.movieService.messageService.add(`${new Date().toLocaleString()} . Get movie list`);
     console.log(`selectedMovie = ${JSON.stringify(this.selectedMovie)}`);
   }
 
