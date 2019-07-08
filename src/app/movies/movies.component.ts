@@ -16,21 +16,21 @@ export class MoviesComponent implements OnInit {
     this.getMoviesFromService();
   }
 
-  movie: Movie = {
-    id: 1,
-    name: 'Trung',
-    releaseYear: 1997
-  };
+  // movie: Movie = {
+  //   id: 1,
+  //   name: 'Trung',
+  //   releaseYear: 1997
+  // };
 
   // movies = fakeMovies;
   movies: Movie[];
   // Action when select a Movie in List item
-  selectedMovie: Movie;
-  onSelect(movie: Movie): void {
-    this.selectedMovie = movie;
-    this.movieService.messageService.add(`${new Date().toLocaleString()} . Get movie list`);
-    console.log(`selectedMovie = ${JSON.stringify(this.selectedMovie)}`);
-  }
+  // selectedMovie: Movie;
+  // onSelect(movie: Movie): void {
+  //   this.selectedMovie = movie;
+  //   this.movieService.messageService.add(`${new Date().toLocaleString()} . Get movie list`);
+  //   console.log(`selectedMovie = ${JSON.stringify(this.selectedMovie)}`);
+  // }
 
   getMoviesFromService(): void {
     this.movieService.getMovies().subscribe(
