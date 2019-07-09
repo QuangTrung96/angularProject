@@ -37,4 +37,8 @@ export class MovieDetailComponent implements OnInit {
     this.location.back();
   }
 
+  save(): void {
+    this.movieService.updateMovie(this.movie).subscribe(() => this.goBack());
+  }
+
 }

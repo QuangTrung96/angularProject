@@ -1,4 +1,21 @@
 <h2>My favorite movies list item</h2>
+<div style="text-align: left">
+    <table style="width: 300px">
+        <tr>
+            <td>New movie's name: </td>
+            <td>
+                <input type="text" placeholder="name" #movieName />
+            </td>
+        </tr>
+        <tr>
+            <td>release year: </td>
+            <input type="text" placeholder="release year" #releaseYear />
+        </tr>
+        <tr>
+            <button (click)="add(movieName.value, releaseYear.value); movieName.value=''; releaseYear.value=''">Add</button>
+        </tr>
+    </table>
+</div>
 <div class="parent">
     <ol class="movies">
         <li class="movieListItem" *ngFor="let eachMovie of movies">
